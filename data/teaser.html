@@ -25,17 +25,27 @@
 
     <script src="https://d3js.org/d3.v4.js" crossorigin="anonymous"></script>
 
-	<script src="javascript/Blob.js"></script>
-	<script src="javascript/canvas-toBlob.js"></script>
-	<script src="javascript/FileSaver.min.js"></script>
-	<script src="javascript/saveSVG.js"></script>
-
     <title>Topological Cluster Perception</title>
 
 </head>
 <body>
 
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Cluster Modelling</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Interactive Explorer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="teaser.html">Teaser</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <div class="page" style="padding: 15px;">
     <h1 style="margin: 0;">Topological Cluster Perception</h1>
@@ -46,10 +56,10 @@
 <div class="page">
 
     <div class="page-content" id="visualization" style="padding-bottom: 0;">
-        <div style="border: solid;">
+        <div><!-- style="border: solid;"-->
         <svg width="420" height="420" style="border: none;" id="teaser_points"></svg>
         </div>
-        <div style="border: solid;">
+        <div><!-- style="border: solid;"-->
         <svg width="630" height="420" style="border: none;" id="teaser_opacity"></svg>
         </div>
     </div>
@@ -60,17 +70,7 @@
 
 <script src="javascript/common.js"></script>
 <script src="javascript/teaser.js"></script>
-<script>
-	function saveImage( plotID ){
 
-        var canvas = document.getElementById("test_div");
-        console.log(canvas);
-        var img    = canvas.toDataURL("image/png");
-        console.log('<img src="'+img+'"/>');
-		//var svg_save = d3.select('#'+plotID);
-		//saveSVGImage(svg_save, plotID+".png" );
-	}
-</script>
 
 
 </body>

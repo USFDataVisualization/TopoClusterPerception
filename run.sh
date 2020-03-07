@@ -15,8 +15,7 @@ python density-model.py --histogram_res_x 30 --histogram_res_y 30 --input data/p
 python density-model.py --histogram_res_x 30 --histogram_res_y 30 --input data/point_count/000_7_12500_20_7_100.png > data/point_count/000_7_12500_20_7_100.json
 
 cd data
-python -m http.server --cgi 8088 &
-sleep 1
-python -m webbrowser -t "http://localhost:8088"
+( sleep 3 ; python -m webbrowser -t "http://localhost:8088" ) &
+python -m http.server --cgi 8088
 
 deactivate
