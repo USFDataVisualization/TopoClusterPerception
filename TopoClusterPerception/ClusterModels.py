@@ -1,7 +1,6 @@
 import math
-from MergeTree import MergeTree
+from TopoClusterPerception.MergeTree import MergeTree
 import matplotlib.pyplot as plt
-
 
 class ClusterModel:
     """class that holds a cluster model"""

@@ -7,7 +7,10 @@ var datasets = {"opacity_1" : "opacity/000_10_70000_0_7_1",
                 "opacity_100" : "opacity/000_10_70000_0_7_100",
                 "points_500" : "point_count/000_7_500_20_7_100",
                 "points_2500" : "point_count/000_7_2500_20_7_100",
-                "points_12500" : "point_count/000_7_12500_20_7_100" };
+                "points_12500" : "point_count/000_7_12500_20_7_100",
+                "overdraw_1": "overdraw_ex/1_cropped",
+                "overdraw_10": "overdraw_ex/10_cropped",
+                "overdraw_100": "overdraw_ex/100_cropped"};
 
 var titles   = {"opacity_1" : "Opacity: 1%",
                 "opacity_5" : "Opacity: 5%",
@@ -16,7 +19,10 @@ var titles   = {"opacity_1" : "Opacity: 1%",
                 "opacity_100" : "Opacity: 100%",
                 "points_500" : "Points: 500",
                 "points_2500" : "Points: 2,500",
-                "points_12500" : "Points: 12,500" };
+                "points_12500" : "Points: 12,500",
+                "overdraw_1": "Opacity 1%",
+                "overdraw_10": "Opacity 10%",
+                "overdraw_100": "Opacity 100%"};
 
 var ds_names = Object.keys(datasets);
 var loaded_data = {};
@@ -83,7 +89,7 @@ function add_linechart( chart_name, data, xExt, yExt, class_name, lc_margin = {l
                 .attr("class", class_name)
 		        .attr("stroke-width", stroke_size + "px")
 		        .attr("d", d3.line()
-			            .x(function(d) { return xAxis(d[0]); })
+			            .x(function(d) { return xAxis(d[0]+0.002); })
 			            .y(function(d) { return yAxis(d[1]); })
 			);
 }

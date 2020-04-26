@@ -1,6 +1,6 @@
 import math
 from operator import itemgetter
-from DisjointSet import DisjointSet
+from TopoClusterPerception.DisjointSet import DisjointSet
 
 
 class MergeTree:

@@ -1,6 +1,6 @@
 import random
 import matplotlib.pyplot as plt
-import ClusterModels
+import TopoClusterPerception.ClusterModels as ClusterModels
 
 
 testDistThreshold = 91

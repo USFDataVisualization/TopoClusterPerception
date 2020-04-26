@@ -1,6 +1,6 @@
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
-import ClusterModels
+import TopoClusterPerception.ClusterModels as ClusterModels
 import argparse
 import json
 import time

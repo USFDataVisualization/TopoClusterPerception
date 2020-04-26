@@ -191,3 +191,29 @@
     fill: none;
 }
 
+
+
+
+.checkmark-container input:checked ~ .checkmark_overdraw_1 {
+  background-color: #4e79a7;
+}
+.overdraw_1_line {
+    stroke: #4e79a7;
+    fill: none;
+}
+
+.checkmark-container input:checked ~ .checkmark_overdraw_10 {
+    background-color: #59a14f;
+}
+.overdraw_10_line {
+    stroke: #59a14f;
+    fill: none;
+}
+
+.checkmark-container input:checked ~ .checkmark_overdraw_100 {
+    background-color: #f28e2c;
+}
+.overdraw_100_line {
+    stroke: #f28e2c;
+    fill: none;
+}

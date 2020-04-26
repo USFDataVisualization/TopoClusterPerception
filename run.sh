@@ -14,6 +14,11 @@ python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/p
 python density-model.py --histogram_res_x 30 --histogram_res_y 30 --input data/point_count/000_7_2500_20_7_100.png > data/point_count/000_7_2500_20_7_100.json
 python density-model.py --histogram_res_x 30 --histogram_res_y 30 --input data/point_count/000_7_12500_20_7_100.png > data/point_count/000_7_12500_20_7_100.json
 
+python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/overdraw_ex/1_cropped.png > data/overdraw_ex/1_cropped.json
+python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/overdraw_ex/10_cropped.png > data/overdraw_ex/10_cropped.json
+python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/overdraw_ex/100_cropped.png > data/overdraw_ex/100_cropped.json
+
+
 cd data
 ( sleep 3 ; python -m webbrowser -t "http://localhost:8088" ) &
 python -m http.server --cgi 8088
