@@ -30,7 +30,9 @@
 
 
 
-
+.overdraw_axis {
+    font-size: 20px;
+}
 
 .page {
 	display: table;

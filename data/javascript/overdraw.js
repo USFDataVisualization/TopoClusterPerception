@@ -12,12 +12,14 @@ function add_teaser_scales( chart_name, xExt, yExt, lc_margin = {left: 25, right
 	var yAxis = d3.scaleLinear().domain( yExt ).range([ lc_height, 0]);
 
     lc_svg.append("g")
+        .attr("class", "overdraw_axis")
         .attr("transform", "translate(" + (lc_svg_width-lc_margin.right) + "," + (lc_margin.top) + ")")
         .call(d3.axisRight(yAxis).ticks(ticksY).tickFormat(d3.format("d")));
 
     lc_svg.append("g")
-            .attr("transform", "translate(" + (lc_margin.left) + "," + (lc_margin.top+lc_height) + ")")
-            .call(d3.axisBottom(xAxis).ticks(5));
+        .attr("class", "overdraw_axis")
+        .attr("transform", "translate(" + (lc_margin.left) + "," + (lc_margin.top+lc_height) + ")")
+        .call(d3.axisBottom(xAxis).ticks(5));
 
 }
 
@@ -29,7 +31,7 @@ function update_plot( chart_name, use_ds, xExt, yExt, offset_amnt = 0.05, ticksY
 	var lc_svg_height = +lc_svg.attr("height");
 
     x_off = Math.floor( use_ds.length )*260
-    let margin = {left: x_off+10, right: 15, top: 10, bottom: 25};
+    let margin = {left: x_off+14, right: 25, top: 10, bottom: 25};
     console.log(margin);
 
 	clear_chart(chart_name);

@@ -20,7 +20,7 @@ python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/o
 
 
 cd data
-( sleep 3 ; python -m webbrowser -t "http://localhost:8088" ) &
+( sleep 3 ; python -m webbrowser -t "http://localhost:8088/teaser.html" ) &
 python -m http.server --cgi 8088
 
 deactivate

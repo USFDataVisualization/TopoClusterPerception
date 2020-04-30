@@ -3,6 +3,8 @@
 # delete old directories
 rm -rf __pycache__
 rm -rf venv
+rm -rf TopoClusterPerception/__pycache__
+find . -name '.DS_Store' -type f -delete
 
 # Create Virtual Environment
 python3 -m venv venv
