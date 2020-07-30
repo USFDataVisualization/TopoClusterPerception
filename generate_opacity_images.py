@@ -6,11 +6,11 @@ import os
 with open('data/mnist/pca.json') as json_file:
     data = json.load(json_file)
 
-if not os.path.exists("data/opacity"):
-    os.mkdir("data/opacity")
+if not os.path.exists("demo/data/opacity"):
+    os.mkdir("demo/data/opacity")
 
 for opacity in range(1, 401):
-    img_name = 'data/opacity/opacity' + '_' + str(int(opacity)) + '.png'
+    img_name = 'demo/data/opacity/opacity' + '_' + str(int(opacity)) + '.png'
 
     if not os.path.exists(img_name):
         print('Creating:', img_name)

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v4.js" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js" crossorigin="anonymous"></script>
+
+	<script src="javascript/common.js"></script>
+	
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+	<title>Modeling the Influence of Visual Density on Cluster Perception in Scatterplots Using Topology</title>
+
+</head>
+<body>
+
+	
+<script>
+	insert_navbar("interactive_opacity.html");
+    insert_page_header();
+</script>
+
+
+<div class="page">
+
+    <div class="sidebar">
+		<!--
+        <label class="checkmark-container">Opacity 1%<input type="checkbox" id="opacity_1" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_opacity_1"></span></label>
+        <label class="checkmark-container">Opacity 5%<input type="checkbox" id="opacity_5" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_opacity_5"></span></label>
+        <label class="checkmark-container">Opacity 10%<input type="checkbox" id="opacity_10" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_opacity_10"></span></label>
+        <label class="checkmark-container">Opacity 50%<input type="checkbox" id="opacity_50" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_opacity_50"></span></label>
+        <label class="checkmark-container">Opacity 100%<input type="checkbox" id="opacity_100" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_opacity_100"></span></label>
+        <label class="checkmark-container">Points 500<input type="checkbox" id="points_500" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_points_500"></span></label>
+        <label class="checkmark-container">Points 2500<input type="checkbox" id="points_2500" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_points_2500"></span></label>
+        <label class="checkmark-container">Points 12500<input type="checkbox" id="points_12500" checked="checked" onchange="updateVis();"><span class="checkmark checkmark_points_12500"></span></label>
+		-->
+        <div class="form-group" style="margin-top: 200px;">
+            <label for="frame">OPACITY ADJUSTMENT</label>
+            <input type="range" class="custom-range" min="1" max="400" step="1" value="100" id="frame" name="frame" oninput="updateImage();">
+			<span>Opacity: </span><span id="current_opacity">25%</span>
+        </div>
+		<hr>
+        <div class="form-group">
+            <label for="override_x_min">X Override</label>
+            <input type="range" class="custom-range" min="0" max="1" step="0.01" value="0" id="override_x_min" name="override_x_min" onchange="updateVis();">
+            <input type="range" class="custom-range" min="0" max="1" step="0.01" value="1" id="override_x_max" name="override_x_max" onchange="updateVis();">
+        </div>
+        <div class="form-group">
+            <label for="override_y_min">Y Override</label>
+            <input type="range" class="custom-range" min="0" max="1" step="0.01" value="0.15" id="override_y_min" name="override_y_min" onchange="updateVis();">
+            <input type="range" class="custom-range" min="0" max="1" step="0.01" value="0.90" id="override_y_max" name="override_y_max" onchange="updateVis();">
+        </div>
+
+		
+		
+    </div>
+    <div id="visualization" style="padding-bottom: 0; width: 1200px; padding: 20px;">
+        <div id="plot_div" style="white-space: nowrap; text-align: center">
+			Loading...
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="javascript/interactive_opacity.js"></script>
+
+
+</body>
+</html>
+

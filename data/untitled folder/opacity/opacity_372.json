@@ -1,0 +1,28 @@
+{
+  "info": {
+    "datafile": "dataset/opacity/opacity_372.png",
+    "histogram resolution": [
+      30,
+      30
+    ],
+    "time_load (ms)": 19.98,
+    "time histogram (ms)": 3104.556,
+    "time MT (ms)": 12.307
+  },
+  "threshold": [
+    0,
+    0.0004389988628942798,
+    0.0004389988628942798,
+    0.0023559797154731887,
+    0.0023559797154731887,
+    "inf"
+  ],
+  "clusters": [
+    3,
+    3,
+    2,
+    2,
+    1,
+    1
+  ]
+}

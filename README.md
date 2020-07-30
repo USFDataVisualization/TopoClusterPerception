@@ -1,6 +1,7 @@
-# Modeling Cluster Perception in Scatterplots
-
-## InfoVis Submission 1054
+# Modeling the Influence of Visual Density on Cluster Perception in Scatterplots Using Topology
+## Ghulam Jilani Quadri and Paul Rosen
+## Transactions on Visualization and Computer Graphics, 2021
+## Proceedings of InfoVis, 2020
 
 This directory contains our source code and data.
 

@@ -9,11 +9,14 @@ import matplotlib.pyplot as plt
 with open("data/mnist/tsne0.json") as json_file:
     data = json.load(json_file)
 
+if not os.path.exists("demo/data/points"):
+    os.mkdir("demo/data/points")
+
 rndperm = np.random.RandomState(seed=0).permutation(len(data['x']))
 
 for n_points in range(500,70001,500):
 
-    img_name = "data/points/points" + '_' + str(n_points) + '.png'
+    img_name = "demo/data/points/points" + '_' + str(n_points) + '.png'
 
     if not os.path.exists(img_name):
         print('Creating:', img_name)
