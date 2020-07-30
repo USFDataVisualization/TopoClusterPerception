@@ -70,6 +70,6 @@ python density-model.py --histogram_res_x 20 --histogram_res_y 20 --input data/o
 echo "Starting Demo Website"
 
 cd demo
-python3 -m http.server --cgi 8000
+python3 -m http.server --cgi 8088
 
 deactivate
