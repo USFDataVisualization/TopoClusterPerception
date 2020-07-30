@@ -6,7 +6,7 @@ from scipy.io import loadmat
 from sklearn.decomposition import PCA
 
 
-mnist = loadmat("dataset/mnist-original.mat")
+mnist = loadmat("data/mnist/mnist-original.mat")
 
 x = mnist["data"].T / 255.0
 y = mnist["label"][0]
@@ -24,10 +24,7 @@ df['pca-one'] = pca_result[:, 0]
 df['pca-two'] = pca_result[:, 1]
 # print('Explained variation per principal component: {}'.format(pca.explained_variance_ratio_))
 
-if not os.path.exists("dataset/opacity"):
-    os.mkdir("dataset/opacity")
-
-with open("dataset/opacity/opacity.json", "w") as outfile:
+with open("data/mnist/pca.json", "w") as outfile:
     json.dump({"x": df['pca-one'].tolist(), "y": df['pca-two'].tolist()}, outfile)
 
-print("results written to dataset/opacity/opacity.json")
+print("results written to data/mnist/pca.json")
